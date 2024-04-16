@@ -26,8 +26,11 @@ def hash_string(input_string):
 
 
 # open and read the file after the appending:
-f = open("te.txt", "r")
+f = open("ans.txt", "r")
 print(repr(f.read()))
-print(hash_string(f.read()) == '5ec3b43337028cb522b22b5b6e7933f07302f9c8bafc67b4a866668978d3a8ff')
+print(hash_string(f.read()))
 print(hash_string(
-    f'0:\n1 2\n1:\n1 1\n2:\n2 3\n3:\n4 5\n4:\n0 0\n5:\n2 5\n4 5\nA:\nB:\n') == '5ec3b43337028cb522b22b5b6e7933f07302f9c8bafc67b4a866668978d3a8ff')
+    '0:\n1 0\n1:\n2 3\n2:\n4 2\n3:\n4 5\n4:\n2 1\n5:\n0 3\n1 4\nA:1\nB:'))
+print(hash_string(f.read()) == '6797e56802e0ff2f5fff1165063f6b8daa5f02b93ed6b905f35e530f82c5661b')
+print(hash_string(
+    '0:\n1 0\n1:\n2 3\n2:\n4 2\n3:\n4 5\n4:\n2 1\n5:\n0 3\n1 4\nA:1\nB:\n') == '6797e56802e0ff2f5fff1165063f6b8daa5f02b93ed6b905f35e530f82c5661b')
